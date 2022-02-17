@@ -11,11 +11,11 @@ const app= ()=> {
       ]
     })
     const [otherState,setotherState]=useState(
-      "Some other state"
+      "Some other state" 
     )
     console.log(personsState,otherState)
     
-nameChangeHandler=()=>{
+const nameChangeHandler=()=>{
   // console.log("was clicked")
   // personsState[0].name="mubasir" /wrong way of changing state
   setPersonsState(
