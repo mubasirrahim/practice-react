@@ -34,9 +34,9 @@ const nameChangeHandler=()=>{
         <h1>Hi I am react app component</h1>
         <p>This is really working</p>
         <button onClick={nameChangeHandler}>Switch Name</button>
-        <Person name={personsState[0].name}age ={personsState[0].age}/>
-        <Person name={personsState[1].name} age ={personsState[1].age}/>
-        <Person name={personsState[2].name} age ={personsState[2].age}>My Hobbies: Racing</Person>
+        <Person name={personsState.persons[0].name}age ={personsState.persons[0].age}/>
+        <Person name={personsState.persons[1].name} age ={personsState.persons[1].age}/>
+        <Person name={personsState.persons[2].name} age ={personsState.persons[2].age}>My Hobbies: Racing</Person>
       </div>
     );
   
