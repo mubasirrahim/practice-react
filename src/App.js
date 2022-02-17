@@ -11,7 +11,15 @@ class App extends Component {
     ]
   }
   nameChangeHandler=()=>{
-    console.log("was clicked")
+    // console.log("was clicked")
+    // this.state.persons[0].name="mubasir" /wrong way of changing state
+    this.setState(
+    {  persons:[
+        { name:"Mubasir Rahim",age:25},
+        {name:"M Amin",age:18},
+        { name:"M Ali", age: 16}
+      ]}
+    )
     }
   render() {
 
