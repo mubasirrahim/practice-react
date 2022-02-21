@@ -3,6 +3,7 @@ import './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
+ 
   state ={
     persons:[
       {id:"asdf1" ,name:"Mubasir",age:25},
@@ -12,17 +13,7 @@ class App extends Component {
     showperson : false
 
   }
-  // nameChangeHandler=(pName)=>{
-  //   // console.log("was clicked")
-  //   // this.state.persons[0].name="mubasir" /wrong way of changing state
-  //   this.setState(
-  //   {  persons:[
-  //       { name:pName,age:25},
-  //       {name:"M Amin",age:18},
-  //       { name:"M Ali", age: 16}
-  //     ]}
-  //   )
-  //   }
+
  nameChangedHandler(event,id){
    const personIndex= this.state.persons.findIndex(p=>{
      return p.id=id;
@@ -47,6 +38,14 @@ class App extends Component {
     }
 
   render() {
+    const style={
+      backgroundColor:"green",
+      color:"white",
+      font:"inherit",
+      coursor:"pointer",
+      border:"1px solid blue",
+      padding :"8px"
+    }
     let persons= null;
     if (this.state.showperson){
      persons=( <div>
@@ -57,19 +56,19 @@ class App extends Component {
           click={()=>this.deleteNameHandler(index)}
           key={person.id}
           changed={(event)=>this.nameChangedHandler(event,person.id)}/>
-          
-
         })}
          </div>
      );
 
+     style.backgroundColor="red";
+ 
     }
 
     return (
       <div className="App">
         <h1>Hi I am react app component</h1>
         <p>This is really working</p>
-        <button onClick={this.togglePersonsHandler}>Switch Name</button>
+        <button style={style} onClick={this.togglePersonsHandler}>Toggle Person</button>
        
          {persons}
       
